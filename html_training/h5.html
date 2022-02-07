@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HTML Javascript</title>
+    <meta charset="UTF-8">
+<meta name="description" content="Free Web tutorials">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="author" content="John Doe">
+    <style>
+ 
+
+        </style>
+</head>    
+<body >
+  <center>
+    <p id="de">Hello Aliasger</p>
+
+    <script>
+        function myFunction() {
+          document.getElementById("de").style.fontSize = "25px"; 
+          document.getElementById("de").style.color = "red";
+          document.getElementById("de").style.backgroundColor = "yellow";        
+        }
+        </script>
+        
+        <button type="button" onclick="myFunction()" style="width: 100px; height: 30px; background-color: rgb(51, 138, 238);color: white; border: none;border-radius: 6px; font-weight: bold;font-size: 24px;">Click Me!</button><br><br>
+        <hr>
+        <p>
+            <button type="button" onclick="light(1)" style="width: 100px; height: 30px; background-color: greenyellow;color: white; border: none;border-radius: 6px; font-weight: bold;font-size: 24px;">show</button>
+            <button type="button" onclick="light(0)" style="width: 100px; height: 30px; background-color: tomato;color: white; border: none;border-radius: 6px; font-weight: bold;font-size: 24px;">hide</button>
+            </p>
+
+            <script>
+                function light(sw) {
+                  var pic;
+                  if (sw == 0) {
+                   pic= document.getElementById('myImage');
+                   pic.style.display="none";
+                  } else {
+                    pic= document.getElementById('myImage');
+                   pic.style.display="block";
+                  }
+                  
+                }
+                
+                </script>
+                <img id="myImage" src="mas.jpg" width="450" height="400">
+              </center>
+</body>
+</html>
