@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Design</title>
+    <meta charset="UTF-8">
+
+<meta name="description" content="Free Web tutorials">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="author" content="John Doe">
+ <style>
+ #overflowTest {
+  background: rgb(54, 100, 252);
+  color:white ;
+  padding: 15px;
+  width: 50%;
+  height: 100px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  border: 1px solid #ccc;
+}
+#df{
+    background-color: green;
+  width: 200px;
+  height: 50px;
+  border: 1px dotted white;
+  overflow: visible;
+  color: #ccc;
+}
+
+#gr{
+    background-color: #ccc;
+  width: 200px;
+  height: 50px;
+  border: 1px dotted black;
+  overflow: hidden;
+  color: purple;
+  font-size: 24px;
+  padding: 15px;
+}
+
+ </style>
+    
+</head>    
+<body >
+    <h2>CSS Overflow</h2>
+    <div id="overflowTest">This text is really long and the height of its container is only 100 pixels. Therefore, a scrollbar is added to help the reader to scroll the content. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.</div>
+    <h2>Overflow: visible</h2>
+    <div id="df">You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div>
+<br><br><br><br>
+
+    <h2>Overflow: hidden</h2>
+
+<div id="gr"> You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div>
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg="nest"></script>
+</body>
+</html>

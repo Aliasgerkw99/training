@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>site</title>
+    <meta charset="UTF-8">
+
+<meta name="description" content="Free Web tutorials">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="author" content="John Doe">
+ <style>
+ *{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #666666;
+    background: #dab2f3;
+}
+
+.wrapper{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1140px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container{
+    position: relative;
+    width: 80%;
+ 
+    height: 550px;
+    display: flex;
+    background: #ffffff;
+    box-shadow: 0 0 5px #999999;
+}
+.login .col-left,
+.login .col-right{
+    padding: 30px;
+    display: flex;
+}
+.login .col-left{
+    width: 60%;
+    clip-path: polygon(0 0, 15% 60%, 100% 0 );
+    background: #a737f1;
+}
+.login .col-right{
+    padding: 60px 30px;
+    width: 50%;
+    margin-left: -10%;
+}
+
+@media(max-width: 575px){
+    .login .container{
+        flex-direction: column;
+        box-shadow: none;
+    }
+    .login .col-left,
+    .login .col-right{
+     width: 100%;
+     margin: 0;
+     clip-path: none;
+    }
+    .login .col-right{
+        padding: 30px;
+    }
+
+    
+}
+
+
+.login .login-text{
+    position: relative;
+    width: 100%;
+    color: #ffffff;
+}
+.login .login-text h2{
+margin-left: 39px;
+margin-bottom: 20px;
+    font-size: 41px;
+    font-weight: 700;
+}
+.login .login-text p{
+  margin-left: 39px;
+  margin-bottom: 20px;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+.login .login-text .btn{
+    display: inline-block;
+    padding: 7px 20px;
+    font-size: 17px;
+    margin-left: 39px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border-radius: 30px;
+    color: #ffffff;
+    font-weight: bold;
+    outline: none;
+    border: 1px solid #ffffff;
+    box-shadow: inset 0 0 0 0 #ffffff;
+    transition: .3s;
+}
+.login .login-text .btn:hover{
+    color: #ee30ee;
+    box-shadow: inset 150px 0 0 0  #ffffff;
+}
+
+
+.login .login-form{
+    position: relative;
+    width: 100%;
+}
+.login .login-form h2{
+margin-left: 3px;
+margin-bottom: 17px;
+
+    font-size: 39px;
+    font-weight: 700;
+}
+.login .login-form p{
+    margin: 0 0 10px 0;
+    text-align: left;
+    color: #666666;
+    font-size: 15px;
+}
+.login .login-form p:last-child{
+    margin: 0;
+    padding-top: 3px;
+}
+.login .login-form p a{
+    color: #de2eee;
+    font-size: 14px;
+    text-decoration: none;
+}
+.login .login-form label {
+    display: block;
+    width: 100%;
+    margin-left: 8px;
+    margin-bottom: 9px;
+    letter-spacing: .5px;
+}
+.login .login-form p:last-child label{
+    width: 60%;
+    float: float;
+}
+.login .login-form label span{
+    color: #ff574e;
+    padding-left: 2px;
+}
+.login .login-form input{
+    display: block;
+    width: 100%;
+    height: 35px;
+    padding: 0 10px;
+    outline: none;
+    border: 1px solid #cccccc;
+    border-radius: 30px;
+}
+.login .login-form input:focus{
+    border-color: #50fff0;
+}
+.login .login-form button,
+.login .login-form input[type=submit] {
+    display: inline-block;
+    width: 100%;
+    margin-top: 5px;
+    color: #f575f5;
+    font-size: 16px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #ac2be7;
+    border-radius: 30px;
+    box-shadow: inset 0 0 0 0 #ac2be7;
+    transition: .3s;
+}
+.login .login-form button:hover,
+.login .login-form input[type=submit]:hover{
+    color: #ffffff;
+    font-weight: bold;
+    box-shadow: inset 395px 0 0 0 #b434e7;
+}    
+ </style>
+    
+</head>    
+<body >
+    <div class="wrapper login">
+        <div class="container">
+            <div class="col-left">
+                <div class="login-text">
+                    <h2>Welcome</h2>
+                    <p>Already have an account<br>Create it!</p>
+                    <a href="" class="btn">Sign in</a>
+                </div>
+            </div>
+
+            <div class="col-right">
+                <div class="login-form">
+                    <h2>Register Now</h2>
+                    <form action="">
+                        <p>
+                            <label>Name<span>*</span></label>
+                            <input type="text" placeholder="Name" required>
+                        </p>
+                        <p>
+                            <label>Email<span>*</span></label>
+                            <input type="email" placeholder="Email" required>
+                        </p>
+                        <p>
+                            <label>Phone no.<span>*</span></label>
+                            <input type="phone" placeholder="Phone no." required>
+                        </p>
+                        <p>
+                            <label>Password<span>*</span></label>
+                            <input type="password" placeholder="Password" required>
+                        </p>
+                        <p>
+                            <input type="submit" value="Register">
+                        </p>
+                        <p>
+                            <a href="">Forget password?</a>
+                        </p>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg="nest"></script>
+</body>
+</html>

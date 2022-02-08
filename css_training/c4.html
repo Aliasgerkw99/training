@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Box model</title>
+    <meta charset="UTF-8">
+
+<meta name="description" content="Free Web tutorials">
+<meta name="keywords" content="HTML, CSS, JavaScript">
+<meta name="author" content="John Doe">
+ <style>
+  div.sd {
+  width: 320px;
+  padding: 10px;
+  border: 5px solid gray;
+
+  margin-top: 30px;
+  outline: 5px dotted violet;
+  outline-offset: 15px;
+} 
+
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+ul.a {
+  list-style-position: outside;
+  width: 500px;
+}
+
+ul.b {
+  list-style-position: inside;
+  width: 500px;
+}
+ </style>
+    
+</head>    
+<body >
+    <center>
+    <img src="flo.jpg" width="350" height="263" alt="Klematis">
+    <div class="sd" style="font-style: italic; font-family: Lucida Console, Courier New, monospace;text-align: center; text-decoration: underline; text-transform: capitalize; line-height: 1.8; text-shadow: 2px 2px 5px goldenrod;">The picture above is 350px wide. The total width of this element is also 350px.</div>  
+    <br><h1>Font Awesome icon library</h1>
+    <i class="fas fa-car" style="font-size:60px;color:yellowgreen;"></i>
+   <br> <h1>CSS link</h1>
+
+<p><b><a href="#" target="_blank">This is a link</a></b></p>
+
+<h1>The list-style-position Property</h1>
+<div style="width: 100%;display: flex; " class="bg" >
+<div style="width: 30%;" class="bg">
+<h2>list-style-position: outside (default):</h2>
+<ul class="a">
+  <li>Coffee - A brewed drink prepared from roasted coffee beans, which are the seeds of berries from the Coffea plant</li>
+  <li>Tea - An aromatic beverage commonly prepared by pouring hot or boiling water over cured leaves of the Camellia sinensis, an evergreen shrub (bush) native to Asia</li>
+  
+</ul>
+</div>
+<div style="width: 30%; "class="bg">
+<h2>list-style-position: inside:</h2>
+<ul class="b">
+  <li>Coffee - A brewed drink prepared from roasted coffee beans, which are the seeds of berries from the Coffea plant</li>
+  <li>Tea - An aromatic beverage commonly prepared by pouring hot or boiling water over cured leaves of the Camellia sinensis, an evergreen shrub (bush) native to Asia</li>
+  
+</ul>
+</div>
+</div>
+
+
+</center>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg="nest"></script>
+</body>
+</html>
