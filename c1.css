@@ -1,0 +1,35 @@
+#para1 {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+  }
+  body {
+    background-color:orange ;
+    background-repeat: repeat-x;
+  }
+  .gt{
+    background-color: aquamarine;/* Set text color to red */
+    color: rgb(196, 123, 245);  
+    font-size: 35px;
+    padding: 20px;
+  }
+  h2{
+color: white;
+font-size: 35px;
+padding: 14px;
+  }
+  div {
+    background-color: rgb(35, 164, 250);
+  }
+  
+  div.first {
+    opacity: 0.1;
+  }
+  
+  div.second {
+    opacity: 0.3;
+  }
+  
+  div.third {
+    opacity: 0.6;
+  }
