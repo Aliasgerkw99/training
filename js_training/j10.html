@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<h2>JavaScript Comparison ,Condition & loop</h2>
+
+<p>Input your age and check for vote</p>
+
+<input id="age" value="18" style="padding: 10px; border: 1px solid aqua; border-radius: 5px; " />
+
+<button onclick="myFunction()" style="padding: 9px; background-color: royalblue;color: white;margin-left: 10px;border: none;border-radius: 5px;">check</button>
+
+<p id="demo"></p>
+<h2>JavaScript if .. else</h2>
+
+
+
+<p id="de1"></p>
+<h2>JavaScript switch</h2>
+
+<p id="de2"></p>
+<h2>JavaScript For Loop</h2>
+
+<p id="de3"></p>
+
+<h2>JavaScript For In</h2>
+
+
+<p id="de4"></p>
+<h2>JavaScript For Of Loop</h2>
+
+
+
+<p id="de5"></p>
+<h2>JavaScript while Loop</h2>
+
+
+
+<p id="de6"></p>
+<script>
+
+function myFunction() {
+  let age = document.getElementById("age").value;
+  let voteable = (age < 18) ? "Too young":"Old enough";
+  document.getElementById("demo").innerHTML = voteable + " to vote.";
+}
+const time = new Date().getHours();
+let greeting;
+if (time < 10) {
+  greeting = "Good morning";
+} else if (time < 20) {
+  greeting = "Good day";
+} else {
+  greeting = "Good evening";
+}
+document.getElementById("de1").innerHTML = greeting;
+let text;
+switch (new Date().getDay()) {
+  case 6:
+    text = "Today is Saturday";
+    break;
+  case 0:
+    text = "Today is Sunday";
+    break;
+  default:
+    text = "Looking forward to the Weekend";
+}
+document.getElementById("de2").innerHTML = text;
+const cars = ["BMW", "Volvo", "Saab", "Ford"];
+let i, len, t2;
+for (i = 0, len = cars.length, t2 = ""; i < len; i++) {
+  t2 += cars[i] + "<br>";
+}
+document.getElementById("de3").innerHTML = t2;
+
+const numbers = [45, 4, 9, 16, 25];
+
+let txt = "";
+for (let x in numbers) {
+  txt += numbers[x] + "<br>"; 
+}
+
+document.getElementById("de4").innerHTML = txt;
+
+let language = "JavaScript";
+
+let t4 = "";
+for (let x of language) {
+  t4 += x + "<br>";
+}
+
+document.getElementById("de5").innerHTML = t4;
+let t5 = "";
+let y = 0;
+while (y < 10) {
+    if(y==5){break;}else{
+  t5 += "<br>The number is " + y;
+  y++;}
+}
+document.getElementById("de6").innerHTML = t5;
+</script>
+
+</body>
+</html>

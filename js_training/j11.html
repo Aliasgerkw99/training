@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<h2>JavaScript Sets</h2>
+
+<p id="ser"></p>
+<p id="ser1"></p>
+
+<h2>JavaScript Maps</h2>
+
+<p id="ser2"></p>
+<p id="ser3"></p>
+<h2>The JavaScript typeof Operator</h2>
+
+<p id="ser4"></p>
+
+
+<script>
+const letters = new Set(["a","b","c"]);
+const d="d";
+
+letters.add(d);
+document.getElementById("ser").innerHTML = letters.size;
+let text = "";
+letters.forEach (function(value) {
+  text += value + "<br>";
+})
+
+document.getElementById("ser1").innerHTML = text;
+const fruits = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200]
+]);
+fruits.set("apples", 200);
+document.getElementById("ser2").innerHTML =fruits.get("apples");
+fruits.delete("apples");
+document.getElementById("ser3").innerHTML =fruits.has("apples");
+
+document.getElementById("ser4").innerHTML = 
+  typeof "john" + "<br>" +
+  typeof 3.14 + "<br>" +
+  typeof NaN + "<br>" +
+  typeof false + "<br>" +
+  typeof [1,2,3,4] + "<br>" +
+  typeof {name:'john', age:34} + "<br>" +
+  typeof new Date() + "<br>" +
+  typeof function () {} + "<br>" +
+  typeof myCar + "<br>" +
+  typeof null;
+</script>
+
+</body>
+</html>

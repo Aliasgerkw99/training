@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Strings search methods</h2>
+
+<h4>1.indexOf() method</h4>
+<p id="de"></p>
+<h4>2.lastIndexOf() method</h4>
+<p id="de1"></p>
+<h4>3.search() method</h4>
+<p id="de2"></p>
+<h4>4.startsWith() method</h4>
+<p id="de3"></p>
+<h4>5.endsWith() method</h4>
+<p id="de4"></p>
+<script>
+let str = "Please locate where 'Ali' occurs!";
+document.getElementById("de").innerHTML = str.indexOf("Ali");
+document.getElementById("de1").innerHTML = str.lastIndexOf("where");
+document.getElementById("de2").innerHTML = str.search("locate");
+let text = "Hello world, welcome to the universe.";
+document.getElementById("de3").innerHTML = text.startsWith("Hello");
+let t1 = "Hello world, welcome to the universe.";
+document.getElementById("de4").innerHTML = text.endsWith("world", 11);
+</script>
+
+</body>
+</html>

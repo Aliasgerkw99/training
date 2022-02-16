@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Array</h2>
+<p id="e1"></p>
+<h2>JavaScript Associative Arrays</h2>
+
+<p id="e3"></p>
+<h4>1.toString() method</h4>
+<p id="de"></p>
+<h4>2.join()</h4>
+<p id="de1"></p>
+<h4>3.pop()</h4>
+<p id="de2"></p>
+<h4>4.push() method</h4>
+<p id="de3"></p>
+<h4>5.shift() method</h4>
+<p id="de4"></p>
+<h4>6.unshift() method</h4>
+<p id="de5"></p>
+<h4>7.concat() method</h4>
+<p id="de6"></p>
+<h4>8.splice() method</h4>
+<p id="de7"></p>
+<h4>9.slice() method</h4>
+<p id="de8"></p>
+<h4>10.sort() method</h4>
+<p id="de9"></p>
+<h4>11.reverse() method</h4>
+<p id="de10"></p>
+
+<h4>12.forEach() method</h4>
+<p id="de11"></p>
+<h4>13.map() method</h4>
+<p id="de12"></p>
+<h4>14.filter() method</h4>
+<p id="de13"></p>
+<h4>15.reduce() method</h4>
+<p id="de14"></p>
+<script>
+
+const cars = ["Saab", "Volvo", "BMW"];
+document.getElementById("e1").innerHTML = cars;
+document.write("length:-"+cars.length);
+
+const person = [];
+person[0] = "John";
+person[1] = "Doe";
+person[2] = 46; 
+document.getElementById("e3").innerHTML =
+person[0] + " " + person.length;
+
+const points = new Array(40, 100, 1);
+document.getElementById("de").innerHTML = cars.toString();
+document.getElementById("de1").innerHTML = cars.join("*");
+cars.pop();
+document.getElementById("de2").innerHTML = cars.toString();
+
+cars.push("ferrari");
+document.getElementById("de3").innerHTML = cars.toString();
+cars.shift();
+document.getElementById("de4").innerHTML = cars.toString();
+cars.unshift("BMW");
+document.getElementById("de5").innerHTML = cars.toString();
+delete cars[2];
+const myGirls = ["Cecilie", "Lone"];
+const myBoys = ["Emil", "Tobias", "Linus"];
+
+const myChildren = myGirls.concat(myBoys);
+document.getElementById("de6").innerHTML = myChildren;
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+let r=fruits.splice(2, 2, "Lemon", "Kiwi");
+document.getElementById("de7").innerHTML = r;
+const citrus = fruits.slice(1,3);
+document.getElementById("de8").innerHTML = fruits + "<br><br>" + citrus;
+document.getElementById("de9").innerHTML = fruits.sort();
+document.getElementById("de10").innerHTML = fruits.reverse();
+const numbers = [45, 4, 9, 16, 25];
+
+let txt = "";
+numbers.forEach(myFunction);
+document.getElementById("de11").innerHTML = txt;
+
+function myFunction(value) {
+  txt += value + "<br>"; 
+}
+const numbers1 = [45, 4, 9, 16, 25];
+const numbers2 = numbers1.map(myFun);
+
+document.getElementById("de12").innerHTML = numbers2;
+
+function myFun(value, index, array) {
+  return value * 2;
+}
+
+const over18 = numbers.filter(myFunc);
+
+document.getElementById("de13").innerHTML = over18;
+
+function myFunc(value, index, array) {
+  return value > 18;
+}
+
+let sum = numbers.reduce(myFunction);
+
+document.getElementById("de14").innerHTML = "The sum is " + sum;
+
+function myFunction(total, value, index, array) {
+  return total + value;
+}
+</script>
+
+</body>
+</html>

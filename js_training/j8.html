@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<h2>JavaScript date</h2>
+
+<p id="e3"></p>
+<h4>1.getMonth() method</h4>
+<p id="de"></p>
+<h4>2.getDate()</h4>
+<p id="de1"></p>
+<h4>3.getHours() method</h4>
+<p id="de2"></p>
+<h4>4.getMinute()</h4>
+<p id="de3"></p>
+<h4>5.getSeconds()</h4>
+<p id="de4"></p>
+<h4>6.setDate()</h4>
+<p id="de5"></p>
+<h4>7.setHours() method</h4>
+<p id="de6"></p>
+<h4>8.setMinute()</h4>
+<p id="de7"></p>
+<h4>9.setSeconds()</h4>
+<p id="de8"></p>
+
+<script>
+
+const d = new Date();
+document.getElementById("e3").innerHTML = d;
+document.getElementById("de").innerHTML = d.getMonth();
+document.getElementById("de1").innerHTML = d.getDate();
+document.getElementById("de2").innerHTML = d.getHours();
+document.getElementById("de3").innerHTML = d.getMinutes();
+document.getElementById("de4").innerHTML = d.getSeconds();
+d.setDate(15);
+document.getElementById("de5").innerHTML = d;
+d.setHours(22);
+document.getElementById("de6").innerHTML =d;
+d.setMinutes(30);
+document.getElementById("de7").innerHTML = d;
+d.setSeconds(30);
+document.getElementById("de8").innerHTML =d; 
+
+</script>
+
+</body>
+</html>

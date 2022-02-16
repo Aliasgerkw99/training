@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Regular Expressions</h2>
+
+<p id="demo"></p>
+<p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="d1">Please visit Microsoft!</p>
+<h2>test()</h2>
+<p id="p01">The best things in life are free!</p>
+
+<p id="f1"></p>
+
+<h2>exec()</h2>
+
+<p id="f2"></p>
+<h2>Javascript errors</h2>
+<p>Please input a number between 5 and 10:</p>
+
+<input id="d5" type="text">
+<button type="button" onclick="myFunction()">Test Input</button>
+
+<p id="p02"></p>
+<h2>JavaScript this Keyword</h2>
+<p id="g4"></p>
+<h2>JavaScript Arrow Function</h2>
+<p id="g6"></p>
+
+<h2>JavaScript Class Method</h2>
+<p id="g8"></p>
+
+<h1>Json</h1>
+
+<p id="g10"></p>
+<script>
+let text = "Visit W3Schools!"; 
+let n = text.search(/w3Schools/i);
+document.getElementById("demo").innerHTML = "word found at "+n;
+
+function myFunction() {
+  let text = document.getElementById("d1").innerHTML;
+  document.getElementById("d1").innerHTML =
+  text.replace(/microsoft/i, "W3Schools");
+}
+
+let t4 = document.getElementById("p01").innerHTML;
+const pattern = /e/;
+document.getElementById("f1").innerHTML = pattern.test(t4);
+
+
+const obj = /e/.exec("The best things in life are free!");
+document.getElementById("f2").innerHTML =
+"Found " + obj[4] + " in position " + obj.index + " in the text: " + obj.input;
+
+
+function myFunction() {
+  const message = document.getElementById("p02");
+  message.innerHTML = "";
+  let x = document.getElementById("d5").value;
+  try { 
+    if(x == "")  throw "is empty";
+    if(isNaN(x)) throw "is not a number";
+    x = Number(x);
+    if(x > 10)   throw "is too high";
+    if(x < 5)  throw "is too low";
+  }
+  catch(err) {
+    message.innerHTML = "Input " + err;
+  }
+  finally {
+    document.getElementById("d5").value = "";
+  }
+}
+
+const person = {
+  firstName: "John",
+  lastName : "Doe",
+  id       : 5566,
+  fullName : function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+document.getElementById("g4").innerHTML = person.fullName();
+var hello;
+
+hello = () => {
+  return "Hello World!";
+}
+
+document.getElementById("g6").innerHTML = hello();
+
+
+class Car {
+  constructor(name, year) {
+    this.name = name;
+    this.year = year;
+  }
+  age(x) {
+    return x - this.year;
+  }
+}
+
+let date = new Date();
+let year = date.getFullYear();
+
+let myCar = new Car("Ford", 2014);
+document.getElementById("g8").innerHTML=
+"My car is " + myCar.age(year) + " years old.";
+
+
+let t10 = '{"employees":[' +
+'{"firstName":"John","lastName":"Doe" },' +
+'{"firstName":"Anna","lastName":"Smith" },' +
+'{"firstName":"Peter","lastName":"Jones" }]}';
+
+const obj5 = JSON.parse(t10);
+document.getElementById("g10").innerHTML =
+obj5.employees[1].firstName + " " + obj5.employees[1].lastName;
+</script>
+
+</body>
+</html>

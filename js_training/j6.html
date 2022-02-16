@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Number methods</h2>
+
+<h4>1.toString() method</h4>
+<p id="de"></p>
+<h4>2.toExponential()</h4>
+<p id="de1"></p>
+<h4>3.toFixed()</h4>
+<p id="de2"></p>
+<h4>4.Number() method</h4>
+<p id="de3"></p>
+<h4>5.parseInt() method</h4>
+<p id="de4"></p>
+<h4>6.parseFloat() method</h4>
+<p id="de5"></p>
+<script>
+let x = 123;
+document.getElementById("de").innerHTML = x.toString() + "<br>" +
+   (123).toString() + "<br>" +
+   (100 + 23).toString();
+   let y = 9.656;
+   document.getElementById("de1").innerHTML =
+  y.toExponential() + "<br>" + 
+  y.toExponential(2) + "<br>" + 
+  y.toExponential(4) + "<br>" + 
+  y.toExponential(6);
+
+  let z=9.656;
+  document.getElementById("de2").innerHTML =
+ z.toFixed(6);
+
+ document.getElementById("de3").innerHTML = 
+  Number(true);
+
+  document.getElementById("de4").innerHTML = 
+  parseInt("-10") + "<br>" +
+  parseInt("-10.33") + "<br>" +
+  parseInt("10") + "<br>" +
+  parseInt("10.33") + "<br>" +
+  parseInt("10 6") + "<br>" +  
+  parseInt("10 years") + "<br>" +  
+  parseInt("years 10");  
+
+  document.getElementById("de5").innerHTML = 
+  parseFloat("10") + "<br>" +
+  parseFloat("10.33") + "<br>" +
+  parseFloat("10 6") + "<br>" +  
+  parseFloat("10 years") + "<br>" +
+  parseFloat("years 10");
+</script>
+
+</body>
+</html>
